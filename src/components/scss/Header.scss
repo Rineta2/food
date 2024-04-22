@@ -154,6 +154,10 @@ header {
   opacity: 0;
   visibility: hidden;
   transition: opacity .3s ease-in-out;
+  
+@media only screen and (max-width: 468px){
+  right: 5px;
+  }
 
   &.show {
     opacity: 1;
