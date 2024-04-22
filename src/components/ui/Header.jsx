@@ -63,7 +63,7 @@ export default function Header() {
         <nav className='nav container'>
 
           <div className="prof">
-            <h1><MdOutlineRestaurantMenu className="icons" />Kuluner</h1>
+            <h1><MdOutlineRestaurantMenu className="icons" />Kuliner</h1>
           </div>
 
           <div className="nav__menu">
