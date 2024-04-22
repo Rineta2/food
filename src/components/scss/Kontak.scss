@@ -1,0 +1,81 @@
+@import './variable.scss';
+
+.kontak {
+  background-color: $sec-c;
+
+  .kontak__container {
+    padding: 1rem 5%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    @media only screen and (max-width: 992px) {
+      padding: 1rem 0;
+    }
+
+    .heading {
+      margin-bottom: 3rem;
+    }
+
+    .kontak__data {
+      display: flex;
+      justify-content: space-evenly;
+
+      @media only screen and (max-width: 468px) {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 3rem;
+      }
+
+      .data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        width: 400px;
+        height: 250px;
+        border-radius: 12px;
+        background-color: $white-c;
+
+        @media only screen and (max-width: 468px) {
+          width: 100%;
+          gap: 2rem;
+        }
+
+        i {
+          font-size: 2.5rem;
+          color: $primary-c;
+        }
+
+        h3 {
+          font-size: $h3-fs;
+          letter-spacing: 1px;
+          color: $title-c;
+          font-weight: 600;
+        }
+
+        p {
+          font-size: $normal-fs;
+          letter-spacing: .5px;
+          color: $title-c;
+          font-weight: 400;
+        }
+
+        a {
+          font-size: $normal-fs;
+          letter-spacing: .5px;
+          color: $body-c;
+          font-weight: 400;
+          width: 100px;
+          height: 40px;
+          margin: 0 auto;
+          background-color: $primary-c;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 12px;
+        }
+      }
+    }
+  }
+}

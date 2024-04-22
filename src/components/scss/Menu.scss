@@ -1,0 +1,188 @@
+@import './variable.scss';
+
+.menu {
+  .menu__container {
+    padding: 1rem 5%;
+
+    @media only screen and (max-width: 992px) {
+      padding: 1rem 0;
+    }
+
+    .heading {
+      h1 {
+        color: $title-c;
+      }
+
+      p {
+        color: $text-c;
+      }
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+      margin: 0 auto;
+      position: relative;
+
+      @media only screen and (max-width: 992px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media only screen and (max-width: 468px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .data {
+        padding: 1rem;
+        width: 100%;
+        height: 300px;
+        background-color: transparent;
+        border-radius: 5px;
+        cursor: pointer;
+        overflow: hidden;
+        border: 2px solid $sec-c;
+        position: relative;
+
+        @media only screen and (max-width: 992px) {
+          padding: 1rem 5%;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-image: url('../../assets/bg.png');
+          top: 0;
+          left: 0;
+          z-index: -1;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        .img {
+          img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 6px;
+            transition: .3s ease-in-out;
+
+            @media only screen and (max-width: 1200px) {
+              width: 100%;
+            }
+          }
+        }
+
+        .text {
+          text-align: center;
+
+          h2 {
+            font-size: $h2-fs;
+            margin-bottom: 1rem;
+            margin-top: .5rem;
+            letter-spacing: 1px;
+            color: $title-c;
+
+            @media only screen and (max-width: 468px) {
+              font-size: $h3-fs;
+              margin-bottom: 1.5rem;
+            }
+          }
+
+          h3 {
+            font-size: $h3-fs;
+            margin-bottom: 1rem;
+            color: $title-c;
+          }
+
+          a {
+            font-size: $h3-fs;
+            width: 120px;
+            height: 40px;
+            background-color: $sec-c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $white-c;
+            margin: 0 auto;
+            color: $white-c;
+            border-radius: 6px;
+            letter-spacing: 1px;
+            transition: .3s ease-in-out;
+            gap: .3rem;
+
+            .icons {
+              font-size: 1.3rem;
+            }
+
+            &:hover {
+              background-color: transparent;
+              border: 1px solid $sec-c;
+              color: $title-c;
+              box-shadow: 0 5px 5px $sec-c;
+            }
+          }
+        }
+
+        &:hover {
+          .img {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+
+      .btn {
+        position: absolute;
+        bottom: -8rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        button {
+          border: none;
+          outline: none;
+          background: $sec-c;
+          width: 160px;
+          height: 40px;
+          cursor: pointer;
+          color: $white-c;
+          border-radius: 6px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+
+    .filter__button {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+
+      @media only screen and (max-width: 468px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+      }
+
+      button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+        width: 100px;
+        height: 40px;
+        border-radius: 12px;
+        transition: .3s ease-in-out;
+
+        &.active {
+          background-color: $primary-c;
+          color: $white-c;
+        }
+      }
+    }
+  }
+}
